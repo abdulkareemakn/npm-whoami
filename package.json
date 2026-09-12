@@ -1,0 +1,28 @@
+{
+  "name": "abdulkareem",
+  "version": "1.0.0",
+  "description": "A neofetch-style terminal business card. Run with: npx abdulkareem",
+  "type": "module",
+  "bin": {
+    "abdulkareem": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "typescript": "^5.5.4"
+  },
+  "license": "ISC"
+}
