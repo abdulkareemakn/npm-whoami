@@ -15,10 +15,10 @@ const WIDTH = 62;
 
 /** Renders "Key: ....... Value" with dot-leader padding, neofetch-style. */
 function field(key: string, value: string): string {
-  const label = chalk.hex("#953800").bold(key);
-  const val = chalk.hex("#0a3069")(
-    value.replace(/[\d,]+\+\+/g, (match) => chalk.green(match)).replace(/[\d,]+--/g, (match) => chalk.red(match)),
-  );
+  const label = chalk.magenta(key);
+  const val = value
+    .replace(/[\d,]+\+\+/g, (match) => chalk.green(match))
+    .replace(/[\d,]+--/g, (match) => chalk.red(match));
   const rawLen = key.length + value.length + 2;
   const dotsCount = Math.max(2, WIDTH - rawLen);
   const dots = chalk.gray(".".repeat(dotsCount));
@@ -28,7 +28,7 @@ function field(key: string, value: string): string {
 /** Renders a section divider line, e.g. "- Contact --------------" */
 function header(title: string): string {
   const bar = "-".repeat(Math.max(0, WIDTH - title.length - 1));
-  return `\n${chalk.bold.white(title)} ${chalk.gray(bar)}`;
+  return `\n${chalk.bold(title)} ${chalk.gray(bar)}`;
 }
 
 // ---- Edit everything below to make this yours ----
