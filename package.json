@@ -24,5 +24,13 @@
     "@types/node": "^20.14.10",
     "typescript": "^5.5.4"
   },
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdulkareemakn/npm-whoami.git"
+  },
+  "bugs": {
+    "url": "https://github.com/abdulkareemakn/npm-whoami/issues"
+  },
+  "homepage": "https://github.com/abdulkareemakn/npm-whoami#readme",
+  "license": "MIT"
 }
